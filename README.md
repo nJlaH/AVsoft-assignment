@@ -1,13 +1,13 @@
-Описание:
-Класс и скрипт для парсинга сайтов в многопоточном режиме
+Description:
+Class and script for parsing sites in multi-threaded mode
 
 
-Описание файлов (script):
-SpiderClass.py - класс для парсинга и запись в БД
-index.py - управляющий скрипт, запускающий парсинг сайта
-spider.sql - SQL-скрипт для создания таблицы внутри БД
+Files description (script):
+SpiderClass.py - Class for parse and connection with DB
+index.py - main script that executes parsing
+spider.sql - SQL-code
 
-Требуемые модули:
+Required modules:
 - mysql.connector
 - requests
 - re
@@ -16,14 +16,14 @@ spider.sql - SQL-скрипт для создания таблицы внутр�
 - concurrent.futures
 - datetime
 
-Подготовка и запуск скрипта:
-- установить mysql
-- создать базу данных mysql (имя по умолчанию - "spider")
-- импортировать spider.sql
-- в index.py в строках 5-8 указать данные для подключения к созданной БД
-- в index.py в строке 9 указать сайт, который необходимо парсить
-- в index.py в строке 10 указать символы или слова, которые не должны встречаться в собираемых ссылках
-- запустить index.py
+To-do:
+- install mysql
+- create DB mysql (default name - "spider")
+- import spider.sql
+- index.py, lines 5-8 - write a data for connection to DB
+- index.py, line 9 - write a site that you need to parse
+- index.py, line 10 - write symbols or words that parser should avoid
+- run index.py
 
-Дополнительно:
-- По умолчанию парсер работает в 30 потоков. Если необходимо это изменить, то нужно задать необходимое значение в 11 строке index.py
+Additionally:
+Parser uses 30 streams by default. Write the amount of streams you need in index.py, line 11
